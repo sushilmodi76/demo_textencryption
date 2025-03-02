@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Secure CryptoTalk</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    
+    <!-- Floating UI Elements -->
+    <div class="interface">
+        <div class="crypto-terminal">
+            <input type="password" id="cryptoKey" placeholder="🔑 Encryption Key">
+            <textarea id="inputText" placeholder="📩 Enter your message..."></textarea>
+            <div class="holographic-buttons">
+                <button id="encryptBtn" class="hologram-btn">🔒 Encrypt</button>
+                <button id="decryptBtn" class="hologram-btn">🔓 Decrypt</button>
+                <button id="speakBtn" class="hologram-btn">🔊 Speak</button>
+            </div>
+            <div id="output" class="holographic-output"></div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script src="crypto.js"></script>
+    <script src="tts.js"></script>
+</body>
+</html>

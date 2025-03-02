@@ -1,0 +1,83 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+    --matrix-green: #0f0;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.interface {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    pointer-events: none;
+}
+
+.crypto-terminal {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+    backdrop-filter: blur(10px);
+    pointer-events: all;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--neon-purple);
+    color: var(--matrix-green);
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.holographic-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.hologram-btn {
+    padding: 15px;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hologram-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.holographic-output {
+    min-height: 150px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--matrix-green);
+    color: var(--matrix-green);
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 300px;
+}
